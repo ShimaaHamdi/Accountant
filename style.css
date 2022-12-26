@@ -1,0 +1,236 @@
+:root {
+    --blue: #1D4ACD;
+    --red: #E40909;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    border: none;
+    list-style:none;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+}
+
+::selection {
+    background-color: var(--blue);
+    color: #ffffff;
+}
+
+html {
+
+    height: 200vh;
+    font-size: 62%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+}
+.btn{
+    color: #fff;
+    background: var(--red);
+    padding: 1rem 3rem;
+    border-radius: 0.8rem;
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 2rem;
+}
+section{
+    padding: 2rem 9%;
+}
+.head{
+    text-align: center;
+ 
+    padding: 1rem 0;
+}
+.head h2{
+    font-size: 3rem;
+    color: var(--blue);
+}
+.head p{
+    color: #666;
+}
+/* Header Style */
+header {
+    position: relative;
+    background: url(images/banner.png) no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background-position: bottom;
+    
+
+}
+header::after{
+    content: '';
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+header .logo{
+    top:20%;
+    position: absolute;
+    padding: 4rem;
+    font-size: 3rem;
+    color: #fff;
+    z-index: 1;
+    font-weight: bolder;
+}
+header .logo span{
+    color: var(--blue);
+}
+header .content{
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+
+}
+header .content h1{
+    font-size: 5rem;
+}
+header .content p{
+    font-size: 2rem;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+.about .container .box{
+    padding: 2rem 3rem;
+    line-height: 2rem;
+    margin: 1rem;
+}
+.about .container .box:hover,
+.service .container .box:hover{
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    cursor: pointer;
+}
+.about .container .box i,
+.service .container .box i{
+    font-size: 3rem;
+    color: var(--blue);
+    margin-bottom: 2rem;
+}
+.about .container .box h3,
+.service .container .box h3{
+    font-weight: 600;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+.about .container .box p,
+.service .container .box p{
+    color: #666;
+    font-size: 1.5rem;
+}
+
+.all{
+    text-align: center;
+    margin: 2rem 8rem;
+   border: 1rem solid var(--blue);
+    padding: 3rem 1rem;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+.all ul i{
+    color: var(--red);
+}
+.all ul li{
+    text-align: start;
+    line-height: 4rem;
+    font-size: 1.4rem;
+    color: #666;
+}
+ 
+.cta{
+    background:url('images/background.jpg')  no-repeat center  ;
+    background-attachment: fixed;
+}
+.cta .content{
+    background: rgb(5 36 147 / 81%);
+    z-index: 1;
+    color: #fff;
+    margin: 5rem 0;
+    padding: 5rem 3rem;
+    width: 50%;
+    border-radius: 0.5rem;
+ }
+ .cta .content h3{
+    font-size: 3rem;
+ }
+ .cta .content p{
+    font-size: 1.3rem;
+ }
+ 
+ .team .container .box{
+    overflow: hidden;
+     margin: 1rem;
+     height: 20rem;
+    border-radius: 0.5rem;
+    border: 1rem solid #fff;
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 10%);
+    position: relative;
+ }
+ .team .container .box img{
+    width: 100%;
+    height: 100%;
+ }
+ .team .container .box .info{
+    position: absolute;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5rem 2rem 2rem;
+    top: -100%;
+    left: 0;
+    z-index: 1;
+    color: #fff;
+    font-size: 1.3rem;
+ }
+ .team .container .box:hover .info{
+    top: 0;
+ }
+
+ /* Media Query */
+
+@media (max-width:768px){
+    .container{
+        display: initial;
+    }
+}
